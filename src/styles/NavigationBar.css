@@ -1,0 +1,39 @@
+.NavigationBar {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px 10px 0;
+    width: 100vw;
+}
+
+.NavigationBar button {
+    margin: 0 0 0 10px;
+    padding: 10px;
+    width: 100%;
+
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #fff;
+
+    background-image: linear-gradient(to right, #ff0505 50%, #9b0505 50%);
+    background-size: 200%;
+    background-position: left;
+
+    border: none;
+    border-radius: 1.5rem;
+    outline: none;
+
+    transition: background-position .25s;
+    transition-timing-function: linear;
+}
+
+.NavigationBar button:hover {
+    cursor: pointer;
+
+    background-position: right;
+}
+
+.NavigationBar button:focus {
+    color: #ff3705;
+
+    background-position: right;
+}
