@@ -1,8 +1,11 @@
 .NavigationBar {
+    position: fixed;
     display: flex;
     flex-direction: row;
     padding: 10px 10px 10px 0;
-    width: 100vw;
+    width: calc(100vw - 30px);
+
+    background-color: #fff;
 }
 
 .NavigationBar button {
@@ -14,7 +17,7 @@
     font-size: 1.5rem;
     color: #fff;
 
-    background-image: linear-gradient(to right, #ff0505 50%, #9b0505 50%);
+    background-image: linear-gradient(to right, #69ff37 50%, #37cd05 50%);
     background-size: 200%;
     background-position: left;
 
@@ -33,7 +36,5 @@
 }
 
 .NavigationBar button:focus {
-    color: #ff3705;
-
     background-position: right;
 }
