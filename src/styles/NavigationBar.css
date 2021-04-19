@@ -1,9 +1,10 @@
 .NavigationBar {
     position: fixed;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     padding: 10px 10px 10px 0;
-    width: calc(100vw - 30px);
+    width: calc(100% - 10px);
 
     background-color: #fff;
 }

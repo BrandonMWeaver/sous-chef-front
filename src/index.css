@@ -1,7 +1,7 @@
 ::-webkit-scrollbar {
   width: 20px;
 
-  background-image: linear-gradient(#69cd37 25%, #fff 25%, #fff 50%, #69cd37 50%, #69cd37 75%, #fff 75%, #fff 100%);
+  background-image: linear-gradient(#fff 25%, #69cd37 25%, #69cd37 50%, #fff 50%, #fff 75%, #69cd37 75%, #69cd37 100%);
 }
 
 ::-webkit-scrollbar-thumb {
