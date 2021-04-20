@@ -1,5 +1,6 @@
 import Home from './components/Home';
 import NavigationBar from './components/NavigationBar';
+import Recipes from './components/Recipes';
 import Section from './components/Section';
 
 import './App.css';
@@ -11,9 +12,9 @@ function App() {
     <div className="App">
       <NavigationBar />
       <Section padded={true} content={<Home featured={MockData.recipes[0]} />} />
-      <Section backgroundColor="#69cd37" />
+      <Section content={<Recipes recipes={MockData.recipes.slice(0, 4)} />} />
       <Section />
-      <Section backgroundColor="#69cd37" />
+      <Section />
     </div>
   );
 }

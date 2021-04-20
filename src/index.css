@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Ultra&display=swap');
+
 ::-webkit-scrollbar {
   width: 20px;
-
-  background-image: linear-gradient(#fff 25%, #69cd37 25%, #69cd37 50%, #fff 50%, #fff 75%, #69cd37 75%, #69cd37 100%);
 }
 
 ::-webkit-scrollbar-thumb {
