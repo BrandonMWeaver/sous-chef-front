@@ -33,6 +33,12 @@
     transition: background-position .25s;
 }
 
+@media screen and (max-width: 1080px) {
+    .NavigationBar button {
+        font-size: 1rem;
+    }
+}
+
 .NavigationBar button:hover {
     cursor: pointer;
 

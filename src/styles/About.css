@@ -47,7 +47,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    flex-direction: column;
+    height: 100%;
 }
 
 .About p {
@@ -58,6 +59,17 @@
     font-family: monospace;
     font-size: 2rem;
     color: #050505;
+}
+
+@media screen and (max-width: 1080px) {
+    .About p {
+        width: 80%;
+        font-size: 1.5rem;
+    }
+}
+
+.About p + p {
+    margin-top: 20px;
 }
 
 .About p .bold {

@@ -130,3 +130,19 @@
 
     background-position: right;
 }
+
+@media screen and (max-width: 1080px) {
+    .Recipes {
+        background-image: linear-gradient(#69ff37, #37cd05);
+    }
+    .Recipes .search__bar button {
+        font-size: 1rem;
+    }
+    .Recipes .recipe {
+        width: calc(50% - 10px);
+        height: calc(50% - 63px);
+    }
+    .Recipes .recipe p {
+        font-size: 1rem;
+    }
+}
