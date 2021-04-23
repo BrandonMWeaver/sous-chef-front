@@ -1,3 +1,4 @@
+import About from './components/About';
 import Home from './components/Home';
 import NavigationBar from './components/NavigationBar';
 import Recipes from './components/Recipes';
@@ -13,7 +14,7 @@ function App() {
       <NavigationBar />
       <Section padded={true} content={<Home featured={MockData.recipes[0]} />} />
       <Section content={<Recipes recipes={MockData.recipes.slice(0, 4)} />} />
-      <Section />
+      <Section content={<About featured={MockData.recipes[0]} />} />
       <Section />
     </div>
   );
