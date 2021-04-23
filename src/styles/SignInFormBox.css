@@ -1,19 +1,29 @@
-.NavigationBar {
-    position: fixed;
-    z-index: 1;
+.SignInFormBox {
     display: flex;
-    flex-direction: row;
-    padding: 10px 10px 10px 0;
-    width: calc(100% - 10px);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.SignInFormBox .box__container {
+    padding: 10px;
+    width: 50%;
+
+    background-image: linear-gradient(#69ff37 0%, #37cd0500 75%, #37cd0500 100%);
+}
+
+.SignInFormBox .box__container .box {
+    padding: 10px;
 
     background-color: #fff;
 }
 
-.NavigationBar button {
+.box button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 0 0 10px;
+    margin: 0;
     padding: 10px;
     width: 100%;
     height: 43px;
@@ -27,18 +37,22 @@
     background-position: left;
 
     border: none;
-    border-radius: 20px;
     outline: none;
+    border-radius: 20px;
 
     transition: background-position .25s;
 }
 
-.NavigationBar button:hover {
+.box button:hover {
     cursor: pointer;
 
     background-position: right;
 }
 
-.NavigationBar button:focus {
-    background-position: right;
+.box p {
+    margin: 20px 0;
+
+    text-align: center;
+    font-family: monospace;
+    font-size: 1rem;
 }

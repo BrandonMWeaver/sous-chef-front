@@ -3,6 +3,7 @@ import Home from './components/Home';
 import NavigationBar from './components/NavigationBar';
 import Recipes from './components/Recipes';
 import Section from './components/Section';
+import SignInFormBox from './components/SignInFormBox';
 
 import './App.css';
 
@@ -15,7 +16,7 @@ function App() {
       <Section padded={true} content={<Home featured={MockData.recipes[0]} />} />
       <Section content={<Recipes recipes={MockData.recipes.slice(0, 4)} />} />
       <Section content={<About featured={MockData.recipes[0]} />} />
-      <Section />
+      <Section content={<SignInFormBox />} />
     </div>
   );
 }

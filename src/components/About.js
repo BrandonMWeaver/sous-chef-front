@@ -17,7 +17,7 @@ function About(props) {
                         <p><span className="bold">Sous-Chef</span> is a place for food enthusiasts to manage their recipes and share them with others if they so choose.</p>
                     </div>
                     <div className="text">
-                        <p>Keep track of steps completed, set timers, find new exciting recipes, and create amazing food.</p>
+                        <p>Track steps completed, set timers, find new and exciting recipes, and create amazing food.</p>
                     </div>
                 </div>
             </div>
