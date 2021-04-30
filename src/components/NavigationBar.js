@@ -22,7 +22,7 @@ function NavigationBar() {
             <button onClick={() => scrollToHome()}>Home</button>
             <button onClick={() => scrollToRecipes()}>Recipes</button>
             <button onClick={() => scrollToAbout()}>About</button>
-            <button onClick={() => scrollToLogIn()}>Log In</button>
+            <button onClick={() => scrollToLogIn()}>Sign In</button>
         </div>
     );
 }

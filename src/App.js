@@ -13,9 +13,9 @@ function App() {
   return (
     <div className="App">
       <NavigationBar />
-      <Section padded={true} content={<Home featured={MockData.recipes[0]} />} />
+      <Section padded={true} content={<Home featured={MockData.recipes[3]} />} />
       <Section content={<Recipes recipes={MockData.recipes.slice(0, 4)} />} />
-      <Section content={<About featured={MockData.recipes[0]} />} />
+      <Section content={<About featured={MockData.recipes[3]} />} />
       <Section content={<SignInFormBox />} />
     </div>
   );

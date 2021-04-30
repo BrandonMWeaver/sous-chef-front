@@ -133,7 +133,7 @@
 
 @media screen and (max-width: 1080px) {
     .Recipes {
-        background-image: linear-gradient(#69ff37, #37cd05);
+        background-image: linear-gradient(#cdff9b, #cdff9b);
     }
     .Recipes .search__bar button {
         font-size: 1rem;

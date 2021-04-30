@@ -8,13 +8,19 @@
 
 .SignInFormBox .box__container {
     padding: 10px;
-    width: 50%;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
 
     background-image: linear-gradient(#69ff37 0%, #37cd0500 75%, #37cd0500 100%);
 }
 
 .SignInFormBox .box__container .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 10px;
+    height: calc(100% - 20px);
 
     background-color: #fff;
 }
@@ -25,7 +31,7 @@
     align-items: center;
     margin: 0;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     height: 43px;
 
     font-family: monospace;
