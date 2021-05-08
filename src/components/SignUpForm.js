@@ -1,59 +1,56 @@
-import { Component } from 'react';
+import React, { useState } from 'react';
 
 import '../styles/SignUpForm.css';
 
-class SignUpForm extends Component {
-    state = {
-        username: '',
-        password: '',
-        password_confirmation: ''
+function SignUpForm(props) {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [password_confirmation, setPasswordConfirmation] = useState('');
+
+    const handleChange = e => {
+        if (e.target.name === "username")
+            setUsername(e.target.value);
+        else if (e.target.name === "password")
+            setPassword(e.target.value);
+        else
+            setPasswordConfirmation(e.target.value);
     }
 
-    handleChange = e => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-    }
-
-    onSignUpPressed = () => {
+    const onSignUpPressed = () => {
         fetch("http://localhost:3000/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify(this.state)
+            body: JSON.stringify({ username, password, password_confirmation })
         })
         .then(r => r.json())
         .then(o => console.log(o));
 
-        this.setState({
-            username: '',
-            password: '',
-            password_confirmation: ''
-        });
+        setUsername('');
+        setPassword('');
+        setPasswordConfirmation('');
     }
 
-    render() {
-        return (
-            <div className="SignUpForm">
-                <div className="background">
-                    <div className="box">
-                        <input name="username" onChange={this.handleChange} value={this.state.username}
-                        placeholder="username" />
-                        <input name="password" onChange={this.handleChange} type="password" value={this.state.password}
-                        placeholder="password" />
-                        <input name="password_confirmation" onChange={this.handleChange} type="password" value={this.state.password_confirmation}
-                        placeholder="password confirmation" />
-                        <div className="button__box">
-                            <button onClick={this.onSignUpPressed}>Sign Up</button>
-                            <button onClick={this.props.goBackAction}>Go Back</button>
-                        </div>
+    return (
+        <div className="SignUpForm">
+            <div className="background">
+                <div className="box">
+                    <input name="username" onChange={handleChange} value={username}
+                    placeholder="username" />
+                    <input name="password" onChange={handleChange} type="password" value={password}
+                    placeholder="password" />
+                    <input name="password_confirmation" onChange={handleChange} type="password" value={password_confirmation}
+                    placeholder="password confirmation" />
+                    <div className="button__box">
+                        <button onClick={onSignUpPressed}>Sign Up</button>
+                        <button onClick={props.goBackAction}>Go Back</button>
                     </div>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default SignUpForm;
