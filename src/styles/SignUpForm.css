@@ -6,54 +6,62 @@
     height: 100%;
 }
 
-.SignUpForm .box {
-    padding: 0 10px 10px 10px;
+.SignUpForm .background {
     width: 50%;
+    height: calc(100% - 40px);
 
-    background-color: #cdff9b;
+    filter: drop-shadow(5px 10px 10px #050505);
 }
 
-.SignUpForm .box p {
-    margin: 10px 0;
+.SignUpForm .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
 
-    text-align: left;
-    font-family: monospace;
-    font-size: 1.5rem;
+    padding: 0 10px;
+    width: calc(100% - 20px);
+    height: 100%;
+
+    background-color: #cdff9b;
+
+    clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px));
 }
 
 .SignUpForm .box input {
+    margin: 0 0 10px 0;
     padding: 10px;
     width: calc(100% - 20px);
     height: 23px;
 
     font-family: monospace;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 
     border: none;
     outline: none;
     border-radius: 20px;
 }
 
+.SignUpForm .box .button__box {
+    width: 100%;
+}
 .SignUpForm .box button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto 0 auto;
-    padding: 10px;
-    width: 50%;
-    height: 43px;
+    float: left;
 
-    font-family: monospace;
-    font-size: 1.5rem;
-    color: #fff;
+    margin: 0 0 0 10px;
 
-    background-image: linear-gradient(to right, #69ff37 50%, #37cd05 50%);
-    background-size: 200%;
-    background-position: left;
+    width: calc(50% - 5px)
+}
 
-    border: none;
-    border-radius: 20px;
-    outline: none;
+.SignUpForm .box button:first-of-type {
+    margin: 0;
+}
 
-    transition: background-position .25s;
+@media screen and (max-width: 1080px) {
+    .SignUpForm .background {
+        width: calc(100% - 40px);
+    }
+    .SignUpForm .box button {
+        font-size: 1rem;
+    }
 }

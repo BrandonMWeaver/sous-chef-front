@@ -37,14 +37,19 @@ class SignUpForm extends Component {
     render() {
         return (
             <div className="SignUpForm">
-                <div className="box">
-                    <p>Username</p>
-                    <input name="username" onChange={this.handleChange} value={this.state.username} />
-                    <p>Password</p>
-                    <input name="password" onChange={this.handleChange} type="password" value={this.state.password} />
-                    <p>Confirm Password</p>
-                    <input name="password_confirmation" onChange={this.handleChange} type="password" value={this.state.password_confirmation} />
-                    <button onClick={this.onSignUpPressed}>Sign Up</button>
+                <div className="background">
+                    <div className="box">
+                        <input name="username" onChange={this.handleChange} value={this.state.username}
+                        placeholder="username" />
+                        <input name="password" onChange={this.handleChange} type="password" value={this.state.password}
+                        placeholder="password" />
+                        <input name="password_confirmation" onChange={this.handleChange} type="password" value={this.state.password_confirmation}
+                        placeholder="password confirmation" />
+                        <div className="button__box">
+                            <button onClick={this.onSignUpPressed}>Sign Up</button>
+                            <button onClick={this.props.goBackAction}>Go Back</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

@@ -15,6 +15,12 @@ class SignInFormBox extends Component {
         });
     }
 
+    onGoBackPressed = () => {
+        this.setState({
+            page: "Primary"
+        });
+    }
+
     render() {
         if (this.state.page === "Primary") {
             return (
@@ -31,7 +37,7 @@ class SignInFormBox extends Component {
         }
         else if (this.state.page === "Sign Up") {
             return (
-                <SignUpForm />
+                <SignUpForm goBackAction={this.onGoBackPressed} />
             );
         }
     }
