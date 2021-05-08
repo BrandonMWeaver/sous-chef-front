@@ -24,20 +24,24 @@ class SignInFormBox extends Component {
     render() {
         if (this.state.page === "Primary") {
             return (
-                <div className="SignInFormBox">
-                    <div className="box__container">
-                        <div className="box">
-                            <button onClick={this.onSignUpPressed}>Sign Up</button>
-                            <p>Already have an account?</p>
-                            <button>Sign In</button>
+                <section>
+                    <div className="SignInFormBox">
+                        <div className="box__container">
+                            <div className="box">
+                                <button onClick={this.onSignUpPressed}>Sign Up</button>
+                                <p>Already have an account?</p>
+                                <button>Sign In</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             );
         }
         else if (this.state.page === "Sign Up") {
             return (
-                <SignUpForm goBackAction={this.onGoBackPressed} />
+                <section>
+                    <SignUpForm goBackAction={this.onGoBackPressed} />
+                </section>
             );
         }
     }

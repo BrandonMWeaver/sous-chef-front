@@ -1,19 +1,19 @@
 import '../styles/NavigationBar.css';
 
 const scrollToHome = () => {
-    window.scrollTo({ top: document.querySelectorAll(".Section")[0].offsetTop, behavior: "smooth" });
+    window.scrollTo({ top: document.querySelectorAll("section")[0].offsetTop, behavior: "smooth" });
 }
 
 const scrollToRecipes = () => {
-    window.scrollTo({ top: document.querySelectorAll(".Section")[1].offsetTop - 63, behavior: "smooth" });
+    window.scrollTo({ top: document.querySelectorAll("section")[1].offsetTop - 63, behavior: "smooth" });
 }
 
 const scrollToAbout = () => {
-    window.scrollTo({ top: document.querySelectorAll(".Section")[2].offsetTop - 63, behavior: "smooth" });
+    window.scrollTo({ top: document.querySelectorAll("section")[2].offsetTop - 63, behavior: "smooth" });
 }
 
 const scrollToLogIn = () => {
-    window.scrollTo({ top: document.querySelectorAll(".Section")[3].offsetTop - 63, behavior: "smooth" });
+    window.scrollTo({ top: document.querySelectorAll("section")[3].offsetTop - 63, behavior: "smooth" });
 }
 
 function NavigationBar() {
