@@ -28,28 +28,10 @@
 }
 
 .Recipes .search__bar button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: left;
-    padding: 10px;
     width: 20%;
-    height: 43px;
 
-    font-family: monospace;
-    font-size: 1.5rem;
-    color: #fff;
-
-    background-image: linear-gradient(to right, #69ff37 50%, #37cd05 50%);
-    background-size: 200%;
-    background-position: left;
-
-    border: none;
-    outline: none;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-
-    transition: background-position .25s;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .Recipes .search__bar button:hover {
@@ -99,36 +81,6 @@
     display: flex;
     width: 100%;
     padding: 10px 0 0 0;
-}
-
-.Recipes .sort__bar button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 0 10px;
-    padding: 10px;
-    width: 100%;
-    height: 43px;
-
-    font-family: monospace;
-    font-size: 1.5rem;
-    color: #fff;
-
-    background-image: linear-gradient(to right, #69ff37 50%, #37cd05 50%);
-    background-size: 200%;
-    background-position: left;
-
-    border: none;
-    outline: none;
-    border-radius: 20px;
-
-    transition: background-position .25s;
-}
-
-.Recipes .sort__bar button:hover {
-    cursor: pointer;
-
-    background-position: right;
 }
 
 @media screen and (max-width: 1080px) {

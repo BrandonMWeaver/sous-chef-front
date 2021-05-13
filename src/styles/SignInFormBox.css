@@ -6,6 +6,7 @@
 
 .SignInFormBox .box__container {
     position: relative;
+
     padding: 10px;
     width: calc(100% - 40px);
     height: calc(100% - 20px);
@@ -18,6 +19,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     padding: 10px;
     height: calc(100% - 20px);
 
@@ -28,6 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
     margin: 0;
     padding: 10px;
     width: 50%;
