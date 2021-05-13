@@ -20,11 +20,11 @@ function SignInFormBox() {
             <div className="SignInFormBox">
                 <div className="box__container">
                     <div className="box">
-                        <button onClick={onSignUpPressed}>Sign Up</button>
+                        <button onClick={onSignUpPressed} tabIndex={page === "Primary" ? "0" : "-1"}>Sign Up</button>
                         <p>Already have an account?</p>
-                        <button>Sign In</button>
+                        <button tabIndex={page === "Primary" ? "0" : "-1"}>Sign In</button>
                     </div>
-                    <SignUpForm left={page === "Sign Up" ? 0 : "100%"} opacity={page === "Sign Up" ? 1: 0} goBackAction={onGoBackPressed} />
+                    <SignUpForm left={page === "Sign Up" ? 0 : "100%"} opacity={page === "Sign Up" ? 1 : 0} displayFocusables={page === "Sign Up"} goBackAction={onGoBackPressed} />
                 </div>
             </div>
         </section>

@@ -37,15 +37,15 @@ function SignUpForm(props) {
         <div className="SignUpForm" style={{ left: props.left, opacity: props.opacity }}>
             <div className="background">
                 <div className="box">
-                    <input name="username" onChange={handleChange} value={username}
+                    <input name="username" tabIndex={props.displayFocusables ? "0" : "-1"} onChange={handleChange} value={username}
                     placeholder="username" />
-                    <input name="password" onChange={handleChange} type="password" value={password}
+                    <input name="password" tabIndex={props.displayFocusables ? "0" : "-1"} onChange={handleChange} type="password" value={password}
                     placeholder="password" />
-                    <input name="password_confirmation" onChange={handleChange} type="password" value={password_confirmation}
+                    <input name="password_confirmation" tabIndex={props.displayFocusables ? "0" : "-1"} onChange={handleChange} type="password" value={password_confirmation}
                     placeholder="password confirmation" />
                     <div className="button__box">
-                        <button onClick={onSignUpPressed}>Sign Up</button>
-                        <button onClick={props.goBackAction}>Go Back</button>
+                        <button tabIndex={props.displayFocusables ? "0" : "-1"} onClick={onSignUpPressed}>Sign Up</button>
+                        <button tabIndex={props.displayFocusables ? "0" : "-1"} onClick={props.goBackAction}>Go Back</button>
                     </div>
                 </div>
             </div>
