@@ -1,20 +1,19 @@
 .SignInFormBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 20px);
 }
 
 .SignInFormBox .box__container {
+    position: relative;
     padding: 10px;
     width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    height: calc(100% - 20px);
 
     background-image: linear-gradient(#69ff37 0%, #37cd0500 75%, #37cd0500 100%);
 }
 
-.SignInFormBox .box__container .box {
+.SignInFormBox .box {
     display: flex;
     justify-content: center;
     align-items: center;

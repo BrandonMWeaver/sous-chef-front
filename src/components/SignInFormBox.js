@@ -1,50 +1,34 @@
-import { Component } from "react";
+import React, { useState } from "react";
 
 import SignUpForm from './SignUpForm';
 
 import '../styles/SignInFormBox.css';
 
-class SignInFormBox extends Component {
-    state = {
-        page: "Primary"
+function SignInFormBox() {
+    const [page, setPage] = useState("Primary");
+
+    const onSignUpPressed = () => {
+        setPage("Sign Up");
     }
 
-    onSignUpPressed = () => {
-        this.setState({
-            page: "Sign Up"
-        });
+    const onGoBackPressed = () => {
+        setPage("Primary");
     }
 
-    onGoBackPressed = () => {
-        this.setState({
-            page: "Primary"
-        });
-    }
-
-    render() {
-        if (this.state.page === "Primary") {
-            return (
-                <section>
-                    <div className="SignInFormBox">
-                        <div className="box__container">
-                            <div className="box">
-                                <button onClick={this.onSignUpPressed}>Sign Up</button>
-                                <p>Already have an account?</p>
-                                <button>Sign In</button>
-                            </div>
-                        </div>
+    return (
+        <section>
+            <div className="SignInFormBox">
+                <div className="box__container">
+                    <div className="box">
+                        <button onClick={onSignUpPressed}>Sign Up</button>
+                        <p>Already have an account?</p>
+                        <button>Sign In</button>
                     </div>
-                </section>
-            );
-        }
-        else if (this.state.page === "Sign Up") {
-            return (
-                <section>
-                    <SignUpForm goBackAction={this.onGoBackPressed} />
-                </section>
-            );
-        }
-    }
+                    <SignUpForm left={page === "Sign Up" ? 0 : "100%"} opacity={page === "Sign Up" ? 1: 0} goBackAction={onGoBackPressed} />
+                </div>
+            </div>
+        </section>
+    );
 }
 
 export default SignInFormBox;

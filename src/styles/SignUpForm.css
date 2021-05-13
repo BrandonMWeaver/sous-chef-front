@@ -1,9 +1,17 @@
 .SignUpForm {
+    position: relative;
+    top: -100%;
+    left: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    height: 100%;
+    width: 100%;
+    height: calc(100% + 20px);
+
+    opacity: 0;
+
+    transition: left .5s, opacity .5s;
 }
 
 .SignUpForm .background {
@@ -13,7 +21,7 @@
     filter: drop-shadow(5px 10px 10px #050505);
 }
 
-.SignUpForm .box {
+.SignUpForm .background .box {
     display: flex;
     justify-content: center;
     align-items: center;

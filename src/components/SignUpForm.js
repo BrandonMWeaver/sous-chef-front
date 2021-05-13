@@ -34,7 +34,7 @@ function SignUpForm(props) {
     }
 
     return (
-        <div className="SignUpForm">
+        <div className="SignUpForm" style={{ left: props.left, opacity: props.opacity }}>
             <div className="background">
                 <div className="box">
                     <input name="username" onChange={handleChange} value={username}
