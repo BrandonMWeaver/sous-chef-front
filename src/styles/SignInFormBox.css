@@ -1,6 +1,6 @@
 .SignInFormBox {
     padding: 10px;
-    width: 100%;
+    width: calc(100% - 20px);
     height: calc(100% - 20px);
 }
 
@@ -8,53 +8,35 @@
     position: relative;
 
     padding: 10px;
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     height: calc(100% - 20px);
 
     background-image: linear-gradient(#69ff37 0%, #37cd0500 75%, #37cd0500 100%);
 }
 
 .SignInFormBox .box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     padding: 10px;
-    height: calc(100% - 20px);
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
 
     background-color: #fff;
+
+    transition: left .5s;
 }
 
 .box button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
     margin: 0;
-    padding: 10px;
+
     width: 50%;
-    height: 43px;
-
-    font-family: monospace;
-    font-size: 1.5rem;
-    color: #fff;
-
-    background-image: linear-gradient(to right, #69ff37 50%, #37cd05 50%);
-    background-size: 200%;
-    background-position: left;
-
-    border: none;
-    outline: none;
-    border-radius: 20px;
-
-    transition: background-position .25s;
-}
-
-.box button:hover {
-    cursor: pointer;
-
-    background-position: right;
 }
 
 .box p {
@@ -62,5 +44,5 @@
 
     text-align: center;
     font-family: monospace;
-    font-size: 1rem;
+    font-size: var(--fontSizeS);
 }

@@ -11,6 +11,6 @@
 
 @media screen and (max-width: 1080px) {
     .NavigationBar button {
-        font-size: 1rem;
+        font-size: var(--fontSizeS);
     }
 }

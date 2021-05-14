@@ -19,12 +19,12 @@ function SignInFormBox() {
         <section>
             <div className="SignInFormBox">
                 <div className="box__container">
-                    <div className="box">
+                    <div className="box" style={{ left: page === "Primary" ? "10px" : "-100%" }}>
                         <button onClick={onSignUpPressed} tabIndex={page === "Primary" ? "0" : "-1"}>Sign Up</button>
                         <p>Already have an account?</p>
                         <button tabIndex={page === "Primary" ? "0" : "-1"}>Sign In</button>
                     </div>
-                    <SignUpForm left={page === "Sign Up" ? 0 : "100%"} opacity={page === "Sign Up" ? 1 : 0} displayFocusables={page === "Sign Up"} goBackAction={onGoBackPressed} />
+                    <SignUpForm left={page === "Sign Up" ? "10px" : "100%"} displayFocusables={page === "Sign Up"} goBackAction={onGoBackPressed} />
                 </div>
             </div>
         </section>

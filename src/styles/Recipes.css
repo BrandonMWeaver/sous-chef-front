@@ -19,7 +19,7 @@
     height: 23px;
 
     font-family: monospace;
-    font-size: 1.5rem;
+    font-size: var(--fontSizeM);
 
     border: none;
     outline: none;
@@ -73,7 +73,7 @@
 
     text-align: center;
     font-family: 'Ultra', serif;
-    font-size: 1.75rem;
+    font-size: var(--fontSizeM);
     color: #050505;
 }
 
@@ -88,13 +88,13 @@
         background-image: linear-gradient(#cdff9b, #cdff9b);
     }
     .Recipes .search__bar button {
-        font-size: 1rem;
+        font-size: var(--fontSizeS);
     }
     .Recipes .recipe {
         width: calc(50% - 10px);
         height: calc(50% - 63px);
     }
     .Recipes .recipe p {
-        font-size: 1rem;
+        font-size: var(--fontSizeS);
     }
 }
