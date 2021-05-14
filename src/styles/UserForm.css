@@ -1,4 +1,4 @@
-.SignUpForm {
+.UserForm {
     position: absolute;
     top: 10px;
     left: 100%;
@@ -15,7 +15,7 @@
     transition: left .5s;
 }
 
-.SignUpForm .form {
+.UserForm .form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +30,7 @@
     clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 50px 100%, 0 calc(100% - 50px));
 }
 
-.SignUpForm .form input {
+.UserForm .form input {
     margin: 0 0 10px 0;
     padding: 10px;
     width: calc(100% - 20px);
@@ -44,11 +44,11 @@
     border-radius: 20px;
 }
 
-.SignUpForm .form .button__box {
+.UserForm .form .button__box {
     width: 100%;
 }
 
-.SignUpForm .form button {
+.UserForm .form button {
     float: left;
 
     margin: 0 0 0 10px;
@@ -56,15 +56,18 @@
     width: calc(50% - 5px);
 }
 
-.SignUpForm .form button:first-of-type {
+.UserForm .form button:first-of-type {
     margin: 0;
 }
 
 @media screen and (max-width: 1080px) {
-    .SignUpForm .form {
+    .UserForm .form {
         width: calc(100% - 80px);
     }
-    .SignUpForm .form button {
+    .UserForm .form input {
+        font-size: var(--fontSizeS);
+    }
+    .UserForm .form button {
         font-size: var(--fontSizeS);
     }
 }

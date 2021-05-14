@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import SignInForm from "./SignInForm";
 import SignUpForm from './SignUpForm';
 
 import '../styles/SignInFormBox.css';
@@ -9,6 +10,10 @@ function SignInFormBox() {
 
     const onSignUpPressed = () => {
         setPage("Sign Up");
+    }
+
+    const onSignInPressed = () => {
+        setPage("Sign In");
     }
 
     const onGoBackPressed = () => {
@@ -22,9 +27,10 @@ function SignInFormBox() {
                     <div className="box" style={{ left: page === "Primary" ? "10px" : "-100%" }}>
                         <button onClick={onSignUpPressed} tabIndex={page === "Primary" ? "0" : "-1"}>Sign Up</button>
                         <p>Already have an account?</p>
-                        <button tabIndex={page === "Primary" ? "0" : "-1"}>Sign In</button>
+                        <button onClick={onSignInPressed} tabIndex={page === "Primary" ? "0" : "-1"}>Sign In</button>
                     </div>
                     <SignUpForm left={page === "Sign Up" ? "10px" : "100%"} displayFocusables={page === "Sign Up"} goBackAction={onGoBackPressed} />
+                    <SignInForm left={page === "Sign In" ? "10px" : "100%"} displayFocusables={page === "Sign In"} goBackAction={onGoBackPressed} />
                 </div>
             </div>
         </section>

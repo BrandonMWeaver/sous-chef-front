@@ -2,18 +2,15 @@ import React, { useState } from 'react';
 
 import '../styles/UserForm.css';
 
-function SignUpForm(props) {
+function SignInForm(props) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [password_confirmation, setPasswordConfirmation] = useState('');
 
     const handleChange = e => {
         if (e.target.name === "username")
             setUsername(e.target.value);
-        else if (e.target.name === "password")
-            setPassword(e.target.value);
         else
-            setPasswordConfirmation(e.target.value);
+            setPassword(e.target.value);
     }
 
     const onSignUpPressed = () => {
@@ -23,14 +20,13 @@ function SignUpForm(props) {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify({ username, password, password_confirmation })
+            body: JSON.stringify({ username, password })
         })
         .then(r => r.json())
         .then(o => console.log(o));
 
         setUsername('');
         setPassword('');
-        setPasswordConfirmation('');
     }
 
     return (
@@ -40,10 +36,8 @@ function SignUpForm(props) {
                 placeholder="username" />
                 <input name="password" tabIndex={props.displayFocusables ? "0" : "-1"} onChange={handleChange} type="password" value={password}
                 placeholder="password" />
-                <input name="password_confirmation" tabIndex={props.displayFocusables ? "0" : "-1"} onChange={handleChange} type="password" value={password_confirmation}
-                placeholder="password confirmation" />
                 <div className="button__box">
-                    <button tabIndex={props.displayFocusables ? "0" : "-1"} onClick={onSignUpPressed}>Sign Up</button>
+                    <button tabIndex={props.displayFocusables ? "0" : "-1"} onClick={onSignUpPressed}>Sign In</button>
                     <button tabIndex={props.displayFocusables ? "0" : "-1"} onClick={props.goBackAction}>Go Back</button>
                 </div>
             </div>
@@ -51,4 +45,4 @@ function SignUpForm(props) {
     );
 }
 
-export default SignUpForm;
+export default SignInForm;
