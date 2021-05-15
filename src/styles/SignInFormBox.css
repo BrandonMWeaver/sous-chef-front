@@ -7,7 +7,7 @@
 .SignInFormBox .box__container {
     position: relative;
 
-    overflow-x: hidden;
+    overflow: hidden;
 
     padding: 10px;
     width: calc(100% - 20px);

@@ -23,10 +23,18 @@ function SignUpForm(props) {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
+            credentials: "include",
             body: JSON.stringify({ username, password, password_confirmation })
         })
         .then(r => r.json())
-        .then(o => console.log(o));
+        .then(o => {
+            console.log(o);
+            if (!("errors" in o)) {
+                props.signInCurrentUser(o);
+                props.goBackAction();
+                props.revolveSignInBox();
+            }
+        });
 
         setUsername('');
         setPassword('');

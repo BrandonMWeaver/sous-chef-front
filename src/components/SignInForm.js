@@ -14,16 +14,24 @@ function SignInForm(props) {
     }
 
     const onSignUpPressed = () => {
-        fetch("http://localhost:3000/users", {
+        fetch("http://localhost:3000/sessions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
+            credentials: "include",
             body: JSON.stringify({ username, password })
         })
         .then(r => r.json())
-        .then(o => console.log(o));
+        .then(o => {
+            console.log(o);
+            if (o !== null) {
+                props.signInCurrentUser(o);
+                props.goBackAction();
+                props.revolveSignInBox();
+            }
+        });
 
         setUsername('');
         setPassword('');

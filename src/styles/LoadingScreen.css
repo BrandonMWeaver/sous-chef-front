@@ -1,0 +1,42 @@
+.LoadingScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.circle.one {
+    position: relative;
+
+    width: 100px;
+    height: 100px;
+
+    background-color: #69ff37;
+}
+
+.circle.two {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 95px;
+    height: 95px;
+
+    background-color: #fff;
+
+    animation: circleTwoAnimation .5s linear infinite;
+}
+
+@keyframes circleTwoAnimation {
+    0% { left: 0; top: 0; }
+    25% { left: 5px; top: 0; }
+    50% { left: 5px; top: 5px; }
+    75% { left: 0; top: 5px; }
+    100% { left: 0; top: 0; }
+}
