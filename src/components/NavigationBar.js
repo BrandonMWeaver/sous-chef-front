@@ -16,13 +16,13 @@ const scrollToLogIn = () => {
     window.scrollTo({ top: document.querySelectorAll("section")[3].offsetTop - 63, behavior: "smooth" });
 }
 
-function NavigationBar() {
+function NavigationBar(props) {
     return (
         <div className="NavigationBar">
             <button onClick={() => scrollToHome()}>Home</button>
             <button onClick={() => scrollToRecipes()}>Recipes</button>
             <button onClick={() => scrollToAbout()}>About</button>
-            <button onClick={() => scrollToLogIn()}>Sign In</button>
+            <button onClick={() => scrollToLogIn()}>Sign {props.inOrOut}</button>
         </div>
     );
 }

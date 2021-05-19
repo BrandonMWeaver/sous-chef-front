@@ -1,15 +1,15 @@
 import '../styles/LoadingScreen.css';
 
-function LoadingScreen() {
-    return (
-        <section>
+function LoadingScreen(props) {
+    if (props.loading) {
+        return (
             <div className="LoadingScreen">
-                <div className="circle one">
-                    <div className="circle two"></div>
-                </div>
+                <div className="icon" />
             </div>
-        </section>
-    );
+        );
+    }
+    else
+        return null;
 }
 
 export default LoadingScreen;

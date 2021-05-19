@@ -14,6 +14,8 @@ function SignInForm(props) {
     }
 
     const onSignUpPressed = () => {
+        props.setCurrentUserLoaded(false);
+
         fetch("http://localhost:3000/sessions", {
             method: "POST",
             headers: {
@@ -29,8 +31,14 @@ function SignInForm(props) {
             if (o !== null) {
                 props.signInCurrentUser(o);
                 props.goBackAction();
-                props.revolveSignInBox();
+                props.setCurrentUserLoaded(true);
             }
+            else
+                props.setCurrentUserLoaded(true);
+        })
+        .catch(e => {
+            console.log(e.message);
+            props.setCurrentUserLoaded(true);
         });
 
         setUsername('');

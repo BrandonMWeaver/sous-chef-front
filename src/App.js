@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import About from './components/About';
 import Home from './components/Home';
@@ -17,6 +17,8 @@ function App() {
   const [currentUserLoaded, setCurrentUserLoaded] = useState(false);
 
   const getCurrentUser = () => {
+    setCurrentUserLoaded(false);
+
     fetch("http://localhost:3000/sessions", {
       credentials: "include"
     })
@@ -24,6 +26,10 @@ function App() {
     .then(o => {
       console.log(o);
       setCurrentUser(o);
+      setCurrentUserLoaded(true);
+    })
+    .catch(e => {
+      console.log(e.message);
       setCurrentUserLoaded(true);
     });
   }
@@ -36,20 +42,18 @@ function App() {
     setCurrentUser(o);
   }
 
-  if (!currentUser && !currentUserLoaded)
+  useEffect(() => {
     getCurrentUser();
+  }, []);
 
   return (
     <div className="App">
-      <NavigationBar />
+      <NavigationBar inOrOut={currentUser ? "Out" : "In"} />
       <Home featured={MockData.recipes[3]} />
       <Recipes recipes={MockData.recipes.slice(0, 4)} />
       <About featured={MockData.recipes[3]} />
-      {currentUserLoaded ?
-        <SignInFormBox currentUser={currentUser} signInCurrentUser={signInCurrentUser} signOutCurrentUser={signOutCurrentUser} />
-        :
-        <LoadingScreen />
-      }
+      <SignInFormBox currentUser={currentUser} setCurrentUserLoaded={setCurrentUserLoaded} signInCurrentUser={signInCurrentUser} signOutCurrentUser={signOutCurrentUser} />
+      <LoadingScreen loading={!currentUserLoaded} />
     </div>
   );
 }

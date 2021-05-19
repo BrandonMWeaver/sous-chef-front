@@ -1,42 +1,28 @@
 .LoadingScreen {
+    position: fixed;
+    top: 63px;
+    left: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
     width: 100%;
-    height: 100%;
+    height: calc(100% - 63px);
 }
 
-.circle {
+.icon {
+    width: 90px;
+    height: 90px;
+
     border-radius: 50%;
+    border: 10px solid #ffffff69;
+    border-top: 10px solid #ff3705;
+
+    animation: iconAnimation 1s linear infinite;
 }
 
-.circle.one {
-    position: relative;
-
-    width: 100px;
-    height: 100px;
-
-    background-color: #69ff37;
-}
-
-.circle.two {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 95px;
-    height: 95px;
-
-    background-color: #fff;
-
-    animation: circleTwoAnimation .5s linear infinite;
-}
-
-@keyframes circleTwoAnimation {
-    0% { left: 0; top: 0; }
-    25% { left: 5px; top: 0; }
-    50% { left: 5px; top: 5px; }
-    75% { left: 0; top: 5px; }
-    100% { left: 0; top: 0; }
+@keyframes iconAnimation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
